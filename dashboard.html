@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <h1>Shiny Tooth Dental</h1>
+          <img src="assets/tooth_3501613.png" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <i class="bx bxs-dashboard bx-sm"></i>
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <i class="bx bxs-calendar bx-sm"></i>
+              <a href="/">Calendar</a>
+            </li>
+            <li>
+              <i class="bx bxs-user bx-sm"></i>
+              <a href="patients.html">Patients</a>
+            </li>
+            <li>
+              <i class="bx bxs-calendar-event bx-sm"></i>
+              <a href="appointments.html">Appointments</a>
+            </li>
+
+            <li>
+              <i class="bx bx-dollar-circle bx-sm"></i>
+              <a href="/">Billing & Payment</a>
+            </li>
+            <li>
+              <i class="bx bxs-book-alt bx-sm"></i>
+              <a href="/">Procedures</a>
+            </li>
+            <li>
+              <i class="bx bxs-calendar-week bx-sm"></i>
+              <a href="/">Schedule</a>
+            </li>
+          </ul>
+        </div>
+        <div class="user">
+          <h4>Logged In:</h4>
+          <div class="row-item">
+            <img src="https://placehold.co/50" />
+            <p class="user-name">Locke, Jade</p>
+          </div>
+          <div class="row-item">
+            <h5>Employee ID:</h5>
+            <p>****567</p>
+          </div>
+          <a class = "navigate-button log-out" href="index.html">
+              <i class="bx bx-log-out bx-xs"></i>
+              <p>Log Out</p>
+          </a>
+        </div>
+      </aside>
+      <main>
+        <header>
+          <h3>Dashboard</h3>
+          <div class="nav">
+            <ul>
+              <li onclick="displayCheckIn()">Patient Check-In/Out</li>
+              <li>Resources</li>
+              <li>Insurance Information</li>
+            </ul>
+            <i class="bx bxs-inbox"></i>
+          </div>
+        </header>
+        <div class="dashboard-content content">
+          <div class="row1">
+            <div class="greeting">
+              <h2>Good Morning, Jade</h2>
+              <div class="search-header">
+                <div class="search">
+                  <input
+                    type="text"
+                    placeholder="Search for patient, doctor, procedures, or insurance info"
+                  />
+                  <i class="bx bx-search"></i>
+                </div>
+                <div class="actions">
+                  <i class="bx bx-filter"></i>
+                  <i class="bx bx-sort-a-z"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row2">
+            <h3>On-Duty</h3>
+            <h3>Upcoming Appointments</h3>
+          </div>
+          <div class="row3">
+            <section class="duty-section">
+              <section class="dentist">
+                <h4>Dentists</h4>
+                <div class="doctor-wrapper">
+                  <div class="doctors">
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Robert Pastrami</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Robert Pastrami</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Robert Pastrami</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="hygienist">
+                <h4>Hygienists</h4>
+                <div class="doctor-wrapper">
+                  <div class="doctors">
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Mckenzie Jackson</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Mckenzie Jackson</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Mckenzie Jackson</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                    <div class="doctor-card">
+                      <div class="header">
+                        <i class="bx bxs-face bx-sm"></i>
+                        <h5>Dr. Mckenzie Jackson</h5>
+                      </div>
+                      <div class="details-1">
+                        <p>10:00AM-5:00PM</p>
+                      </div>
+                      <div class="doctor-footer">
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-user-detail"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <h3>Checked-In Patients</h3>
+              <section class="patients-section">
+                <div class="patients-wrapper">
+                  <div class="patients"></div>
+                </div>
+              </section>
+            </section>
+            <section class="appt-section">
+              <div class="appt-wrapper">
+                <div class="appts"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="check-in-modal">
+      <div class="check-in">
+        <div class="close">
+          <i class="bx bx-x bx-sm" onclick="closeCheckIn()"></i>
+        </div>
+        <h3>Check-In Patient</h3>
+        <h5>Patient Information Form</h5>
+        <div class="search">
+          <input
+            type="text"
+            id="name"
+            name="patient-name"
+            placeholder="Search by name or date of birth"
+          />
+          <i class="bx bx-search bx-xs"></i>
+        </div>
+        <form>
+          <label for="firstName">First Name</label>
+          <div class="textfield">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              autocomplete="off"
+            />
+          </div>
+          <label for="lastName">Last Name</label>
+          <div class="textfield">
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              autocomplete="off"
+            />
+          </div>
+          <label for="date">Date</label>
+          <div class="textfield date picker">
+            <input type="date" id="date" name="date" autocomplete="off" />
+          </div>
+          <label for="time">Time</label>
+          <div class="textfield time picker">
+            <input type="time" id="time" name="time" />
+          </div>
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      let patientsHTML = "";
+      const numberOfTimesPatients = 4;
+      for (let i = 0; i < numberOfTimesPatients; i++) {
+        patientsHTML += `<div class="patient-card">
+                                        <div class="actions">
+                                            <i class='bx bx-calendar-event  tooltip'>
+                                                <span class="tooltiptext top">Make Appointment</span></i>
+                                            <i class='bx bxs-user-detail tooltip'>
+                                                <span class="tooltiptext top">View Patient</span>
+                                            </i>
+                                        </div>
+                                        <i class='bx bxs-user bx-md '></i>
+                                        <h5>Susie Derkins</h5>
+                                        <button  class="secondary-button" type="button">Check-Out</button>
+                                    </div>`;
+      }
+      document.querySelector(".patients").innerHTML = patientsHTML;
+
+      let apptsHTML = "";
+      const numberOfTimesAppts = 4;
+      for (let i = 0; i < numberOfTimesAppts; i++) {
+        apptsHTML += `<div class="appointment-card">
+                                    <div class="header">
+                                        <h4>Edna Smith</h4>
+                                        <div class="actions">
+                                            <i class='bx bx-calendar tooltip'>
+                                                <span class="tooltiptext bottom">View on Calendar</span>
+                                                </i>
+                                            <i class='bx bxs-edit tooltip'>
+                                                <span class="tooltiptext bottom">Edit Appointment</span>
+                                                </i>
+                                            <i class='bx bxs-user-detail tooltip'>
+                                                <span class="tooltiptext left">View Patient</span>
+                                                </i>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="details">
+                                            <h5>Time: </h5>
+                                            <p>3:30pm</p>
+                                        </div>
+                                        <div class="details">
+                                            <h5>Provider(s):</h5>
+                                            <p>Robert P, Mckenzie J.</p>
+                                        </div>
+                                        <div class="details">
+                                            <h5>Reason for Appointment:</h5>
+                                            <p>Teeth Cleaning, Cavity Filling</p>
+                                        </div>
+                                    </div>
+                                        <button class="secondary-button" type="button">Check-In</button>
+                                </div>`;
+      }
+      document.querySelector(".appts").innerHTML = apptsHTML;
+
+      const resizeObserver = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+          const windowHeight = window.innerHeight;
+          const elements = document.querySelectorAll("header, .row1, .row2");
+          const totalFixedHeight = Array.from(elements).reduce(
+            (acc, el) => acc + el.getBoundingClientRect().height,
+            0
+          );
+          const addedMarginPadding = 30 + 30 + 35;
+          const remainingHeight =
+            windowHeight - (totalFixedHeight + addedMarginPadding);
+
+          const dutyContentHeight = entry.target
+            .querySelector(".duty-section")
+            .getBoundingClientRect().height;
+          const apptContentHeight = entry.target
+            .querySelector(".appt-section")
+            .getBoundingClientRect().height;
+          const apptWrapperHeight = entry.target
+            .querySelector(".appt-wrapper")
+            .getBoundingClientRect().height;
+
+          if (dutyContentHeight > remainingHeight) {
+            document.querySelector(".appt-wrapper").style.maxHeight =
+              dutyContentHeight + "px";
+          } else {
+            document.querySelector(".appt-wrapper").style.maxHeight =
+              remainingHeight + "px";
+          }
+        });
+      });
+
+      resizeObserver.observe(document.querySelector(".content"));
+
+      function displayCheckIn() {
+        document.querySelector(".check-in-modal").style.display = "block";
+      }
+
+      function closeCheckIn() {
+        document.querySelector(".check-in-modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

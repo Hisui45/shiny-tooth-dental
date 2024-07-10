@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Patients</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Shiny Tooth Dental</h1>
+                <img src="assets/tooth_3501613.png">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class='bx bxs-dashboard bx-sm'></i>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-calendar bx-sm'></i>
+                        <a href="/">Calendar</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-user bx-sm'></i>
+                        <a href="patients.html">Patients</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-calendar-event bx-sm'></i>
+                        <a href="appointments.html">Appointments</a>
+                    </li>
+
+                    <li>
+                        <i class='bx bx-dollar-circle bx-sm'></i>
+                        <a href="/">Billing & Payment</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-book-alt bx-sm'></i>
+                        <a href="/">Procedures</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-calendar-week bx-sm'></i>
+                        <a href="/">Schedule</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="user">
+                <h4>Logged In:</h4>
+                <div class="row-item">
+                    <img src="https://placehold.co/50">
+                    <p class="user-name">Locke, Jade</p>
+                </div>
+                <div class="row-item">
+                    <h5>Employee ID:</h5>
+                    <p>****567</p>
+                </div>
+                <a href="index.html">
+                    <div class="log-out ">
+                        <i class='bx bx-log-out bx-xs'></i>
+                        <p>Log Out</p>
+                    </div>
+                </a>
+            </div>
+
+        </aside>
+        <main>
+            <header>
+                <h3>Patients</h3>
+                <div class="nav">
+                    <ul>
+                        <li onclick="displayCheckIn()">
+                            Patient Check-In/Out
+                        </li>
+                        <li>
+                            Resources
+                        </li>
+                        <li>
+                            Insurance Information
+                        </li>
+                    </ul>
+                    <i class='bx bxs-inbox'></i>
+                </div>
+            </header>
+            <div class="patient-content content">
+                <div class="header">
+                    <i onclick="closePatient()" class='bx bx-arrow-back bx-sm'></i>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-info">
+                        <div class="profile-header">
+                            <h3>Personal Information</h3>
+                            <button>Edit</button>
+                        </div>
+                        <div class="profile-box">
+                            <div class="header">
+                                <h1>Edna Granny Smith</h1>
+                                <p><span>Patient ID: </span>4573434</p>
+                            </div>
+                            <div class="grid-col-2">
+                                <ul>
+                                    <li><span>Date Of Birth:</span>
+                                        <p>04-22-1965</p>
+                                    </li>
+                                    <li>
+                                        <span>Address:</span>
+                                        <p>12235 Lane Way, Highland, MI 34635</p>
+                                    </li>
+                                    <li><span>Phone Number:</span>
+                                        <p>1+(346)-545-2234</p>
+                                    </li>
+                                    <li><span>Email:</span>
+                                        <p>edna.smith@beanworks.com</p>
+                                    </li>
+                                    <li><span>Language Preference:</span>
+                                        <p>English</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><span>Insurance Provider:</span>
+                                        <p>XYZ Insurance</p>
+                                    </li>
+                                    <li><span>Policy Number:</span>
+                                        <p>123456789</p>
+                                    </li>
+                                    <li><span>Emergency Contact:</span>
+                                        <p>John Doe (123) 456-7890</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-history">
+                        <div class="profile-header">
+                        <h3>Medical History</h3>
+                        <button>Edit</button>
+                        </div>
+                        <div class="profile-box">
+                            <div class="grid-col-2">
+                                <div>
+                                    <h4>Allergies</h4>
+                                    <div id="allergies" class="chip-box"></div>
+                                </div>
+                                <div>
+                                    <h4>Medications</h4>
+                                    <div id="medications" class="chip-box"></div>
+                                </div>
+                            </div>
+                            <div id="treatments">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-appointments">
+                        <div class="profile-header">
+                            <h3>Appointments</h3>
+                            <button>Manage</button>
+                        </div>
+                        <div class="profile-box grid-col-2">
+                            <div>
+                                <h4>Last Visit</h4>
+                                <div class="profile-card">
+                                    <div class="header">
+                                        <h3>June 23, 2023</h3>
+                                        <p>228 Days Ago</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span>Provider(s):</span>
+                                            <p>Dr. Leroy, J</p>
+                                        </li>
+                                        <li>
+
+                                            <p><span>Reason for Appointment: </span>Tooth Ache, Routine Hygiene</p>
+                                        </li>
+                                        <li>
+                                            <span>Procedures:</span>
+                                            <p> Teeth Cleaning, Tooth Filling</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Upcoming Appointment</h4>
+                                <div class="profile-card">
+                                    
+                                    <div class="header">
+                                        <h3>February 15, 2024</h3>
+                                        <p>5 Days Away</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span>Time:</span>
+                                            <p>3:30PM</p>
+                                        </li>
+                                        <li>
+                                            <span>Reason for Appointment: </span>
+                                            <p>Routine Cleaning</p>
+                                        </li>
+                                    </ul>
+                                    <div class="actions">
+                                        <i class='bx bxs-edit tooltip'>
+                                            <span class="tooltiptext bottom">Edit Appointment</span>
+                                        </i>
+                                        <i class='bx bx-calendar-event tooltip'><span class="tooltiptext bottom">View on Calendar</span></i>
+                                        <i class='bx bx-calendar-x tooltip' ><span class="tooltiptext bottom">Cancel Appointment</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="patients-content content">
+                <div class="search-header">
+                    <div class="search">
+                        <input type="text" placeholder="Search for patients by name, id, or date of birth">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <div class="actions">
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-sort-a-z'></i>
+                    </div>
+                </div>
+                <h5>Quick View</h5>
+                <section class="patients-section">
+                    <div class="patients">
+
+                    </div>
+                    <div class="peek-patient">
+                        <div class="header">
+                            <i onclick="hidePeek()" class='bx bx-x bx-sm'></i>
+                            <i onclick="openPatient()" class='bx bx-expand bx-sm'></i>
+                        </div>
+                        <div class="details">
+                            <div class="identification">
+                                <h2>Candace Be Reel</h2>
+                                <p>Patient ID: 4573434</p>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <span>Date Of Birth:</span>
+                                        <p>04-22-1965</p>
+                                    </li>
+                                    <li>
+                                        <span>Phone Number:</span>
+                                        <p>+1 (346)-545-2234</p>
+                                    </li>
+                                    <li>
+                                        <span>Email:</span>
+                                        <p>candace.reel@beanworks.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="appointments-box">
+                                <h4>Last Visit:</h4>
+                                <ul>
+                                    <li>
+                                        <span>Date: </span>
+                                        <p>June 25, 2023</p>
+                                        <span>(228 Days Ago)</span>
+                                    </li>
+                                    <li>
+                                        <span>Provider(s): </span>
+                                        <p>Dr. Leroy, J</p>
+                                    </li>
+                                    <li>
+                                        <span>Procedures:</span>
+                                        <p> Teeth Cleaning</p>
+                                    </li>
+                                </ul>
+                                <button class="navigate-button" type="button">View Appointments</button>
+                            </div>
+                            <div class="footer">
+                                <button class="secondary-button" type="button">Check-In</button>
+                                <button class="primary-button" type="button">Make Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <div class="check-in-modal">
+        <div class="check-in">
+            <div class="close">
+                <i class='bx bx-x bx-sm' onclick="closeCheckIn()"></i>
+            </div>
+            <h3>Check-In Patient</h3>
+            <h5>Patient Information Form</h5>
+            <div class="search">
+                <input type="text" id="name" name="patient-name" placeholder="Search by name or date of birth">
+                <i class='bx bx-search bx-xs'></i>
+            </div>
+            <form>
+                <label for="firstName">First Name</label>
+                <div class="textfield">
+                    <input type="text" id="firstName" name="firstName" autocomplete="off" />
+                </div>
+                <label for="lastName">Last Name</label>
+                <div class="textfield">
+                    <input type="text" id="lastName" name="lastName" autocomplete="off" />
+                </div>
+                <label for="date">Date</label>
+                <div class="textfield date picker">
+                    <input type="date" id="date" name="date" autocomplete="off" />
+                </div>
+                <label for="time">Time</label>
+                <div class="textfield time picker">
+                    <input type="time" id="time" name="time" />
+                </div>
+                <div class="button">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+
+        let treatmentsHTML = '<h4>Past Treatments</h4>';
+        const numberOfTimesTreatment = 3;
+        for (let i = 0; i < numberOfTimesTreatment; i++) {
+            treatmentsHTML += `<div class="profile-card expand-card">
+                                    <div class="header">
+                                        <h4>Tooth Filling, Teeth Cleaning</h4>
+                                        <h5>January 15, 2024</h5>
+                                    </div>
+                                    <p>Provider(s): Dr. Smith, Jane Doe</p>
+                                </div>
+                                <div class="treatment-extended">
+  <div class="treatment-details">
+    <h3>Visit Details</h3>
+    <ul>
+      <li><span>Date of Visit:</span> <p>January 15, 2024</p></li>
+      <li><span>Treatment Provider:</span> <p>Dr. Smith</p></li>
+    </ul>
+  </div>
+
+  <div class="treatment">
+    <div class="treatment-info">
+      <h4>Dental Filling</h4>
+      <ul>
+        <li><span>Tooth Number:</span> <p>14</p></li>
+        <li><span>Anesthesia:</span> <p>Local anesthesia</p></li>
+      </ul>
+    </div>
+    <div class="treatment-outcome">
+      <h4>Notes</h4>
+      <p>The dental filling procedure was successful. No complications were encountered.</p>
+      <p>Post-Operative Instructions: Avoid hard or sticky foods for 24 hours. Continue regular oral hygiene routine.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="treatment">
+    <div class="treatment-info">
+      <h4>Dental Cleaning</h4>
+      <ul>
+        <li><span>Hygienist:</span> <p>Jane Doe</p></li>
+      </ul>
+    </div>
+    <div class="treatment-outcome">
+      <h4>Notes</h4>
+      <p>The dental cleaning procedure was completed without any issues.</p>
+      <p>Post-Operative Instructions: Schedule the next cleaning appointment in six months.</p>
+    </div>
+  </div>
+</div>`;
+        }
+        document.getElementById('treatments').innerHTML = treatmentsHTML;
+
+        var coll = document.getElementsByClassName("expand-card");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        let allergiesHTML = '';
+
+        const allergies = [
+            "Latex",
+            "Peanuts",
+            "Tree nuts",
+            "Novocaine",
+            "Dust mites",
+            "Penicillin",
+            "Oxybenzone",
+        ];
+        allergies.forEach(item => {
+            allergiesHTML += `<div class ="chip">
+                ${item}
+                </div>`;
+        });
+
+
+        document.getElementById('allergies').innerHTML = allergiesHTML;
+
+
+        let medicationsHTML = '';
+
+
+        const medications = [
+            "Acetaminophen",
+            "Ibuprofen",
+            "Antihistamine",
+            "Antacid",
+            "Ventolin Inhaler",
+            "Prozac",
+            "Prilosec",
+            "Yaz Birth Control",
+            "Humalog Insulin",
+        ];
+
+        medications.forEach(item => {
+            medicationsHTML += `<div class ="chip">
+                ${item}
+                </div>`;
+        });
+
+
+        document.getElementById('medications').innerHTML = medicationsHTML;
+
+        let patientsHTML = '';
+        const numberOfTimesPatient = 25;
+        for (let i = 0; i < numberOfTimesPatient; i++) {
+            patientsHTML += `<div class="patient-card">
+                            <div onclick="peekPatient()" class="header">
+                                <i class='bx bxs-user'></i>
+                                <h4>Reel, Candice</h4>
+                            </div>
+                            <div class="actions">
+                                <i onclick = "openAppointments()" class ='bx bx-calendar-event  tooltip'>
+                                    <span class="tooltiptext bottom">Manage Appointments</span></i>
+                                <i onclick="openPatient()" class='bx bxs-user-detail tooltip'>
+                                    <span class="tooltiptext bottom">View Patient</span>
+                                </i>
+                            </div>
+                        </div>`;
+        }
+        document.querySelector('.patients').innerHTML = patientsHTML;
+
+        function peekPatient() {
+            document.querySelector('.peek-patient').style.display = 'block'
+        }
+
+        function hidePeek() {
+            document.querySelector('.peek-patient').style.display = 'none'
+        }
+
+        function openPatient() {
+            document.querySelector('.patient-content').style.display = 'block'
+            document.querySelector('.patients-content').style.display = 'none'
+        }
+
+        function closePatient() {
+            document.querySelector('.patient-content').style.display = 'none'
+            document.querySelector('.patients-content').style.display = 'grid'
+        }
+
+
+        function displayCheckIn() {
+            document.querySelector('.check-in-modal').style.display = 'block'
+        }
+
+        function closeCheckIn() {
+            document.querySelector('.check-in-modal').style.display = 'none'
+        }
+
+    </script>
+
+</body>
+
+</html>
